@@ -1,0 +1,29 @@
+{
+  "name": "authorization-jwt-demo",
+  "version": "1.0.0",
+  "description": "Demo project with 2 servers to test JWT authorization methods, perfect to get started with creating auth apis. This project skips authentication, check the other repo for this.",
+  "main": "authServer.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon devServer.js",
+    "auth": "nodemon authServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocean-nemos/authorization-jwt-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocean-nemos/authorization-jwt-demo/issues"
+  },
+  "homepage": "https://github.com/ocean-nemos/authorization-jwt-demo#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

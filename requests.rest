@@ -1,0 +1,36 @@
+### login
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "jhon"
+}
+
+###
+
+POST http://localhost:4000/refresh/token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJpYXQiOjE3NDcxNjY1NDN9.kLJK5INkGjVrg5Lift3jZE5OrNvkE-qpg9gaTZ-NWck"
+}
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJpYXQiOjE3NDcxNjY1NDN9.kLJK5INkGjVrg5Lift3jZE5OrNvkE-qpg9gaTZ-NWck"
+}
+
+### get all posts
+
+GET http://localhost:3000/users/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJpYXQiOjE3NDcxNTk2OTV9.DFTI3y2q6tz2PMzlUodN93hiPXQczytZRU8lTFapjAM
+
+### get current user post
+
+GET http://localhost:3000/user/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJpYXQiOjE3NDcxNjYwNTYsImV4cCI6MTc0NzE2NjA5MX0.V-eYx7THfPdnCLY-dfxNnnw-GOjU-LTQ7PKmIzOt3EM
