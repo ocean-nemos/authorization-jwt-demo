@@ -32,8 +32,11 @@ app.post("/refresh/token", (req, res) => {
     const isFound = refreshTokens.includes(refreshToken)
     if (!isFound) return res.sendStatus(403)
 
-    // verify jwt token with the respective refresh secret
+    // verify jwt token with the respective refresh secret payload back
     jwt.verify(refreshToken, refreshJwtSecret, (err, user) => {
+
+        // IMPORTANT READ: if you pass (err, payload) and try to create the token with that payload variable you will get error verifying that new token with jwt, instead manually parse all the things of the original payload and give it an adecuate name, like here with user.
+
         if (err) return res.sendStatus(403) // forbidden
 
         // create new access token
